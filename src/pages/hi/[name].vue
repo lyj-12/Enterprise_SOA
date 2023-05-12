@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { test } from '~/api/test'
+
 const props = defineProps<{ name: string }>()
 const router = useRouter()
 const user = useUserStore()
@@ -7,6 +9,11 @@ const { t } = useI18n()
 watchEffect(() => {
   user.setNewName(props.name)
 })
+
+function tests() {
+  const res = test()
+  console.log(res)
+}
 </script>
 
 <template>
@@ -34,6 +41,11 @@ watchEffect(() => {
         </ul>
       </p>
     </template>
+    <div>
+      <el-button type="primary" @click="tests">
+        Primary
+      </el-button>
+    </div>
 
     <div>
       <button

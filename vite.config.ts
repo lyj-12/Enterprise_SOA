@@ -14,6 +14,7 @@ import Inspector from 'vite-plugin-vue-inspector'
 import LinkAttributes from 'markdown-it-link-attributes'
 import Unocss from 'unocss/vite'
 import Shiki from 'markdown-it-shiki'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 // @ts-expect-error failed to resolve types
 import VueMacros from 'unplugin-vue-macros/vite'
@@ -45,6 +46,7 @@ export default defineConfig({
 
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
+      resolvers: [ElementPlusResolver()],
       imports: [
         'vue',
         'vue-router',
@@ -62,6 +64,7 @@ export default defineConfig({
 
     // https://github.com/antfu/unplugin-vue-components
     Components({
+      resolvers: [ElementPlusResolver()],
       // allow auto load markdown components under `./src/components/`
       extensions: ['vue', 'md'],
       // allow auto import and register components used in markdown
