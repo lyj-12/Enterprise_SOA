@@ -1,18 +1,4 @@
-<p align='center'>
-  <img src='https://user-images.githubusercontent.com/11247099/154486817-f86b8f20-5463-4122-b6e9-930622e757f2.png' alt='Vitesse - Opinionated Vite Starter Template' width='600'/>
-</p>
 
-<p align='center'>
-Mocking up web app with <b>Vitesse</b><sup><em>(speed)</em></sup><br>
-</p>
-
-<br>
-
-<p align='center'>
-<a href="https://vitesse.netlify.app/">Live Demo</a>
-</p>
-
-<br>
 
 <p align='center'>
 <b>English</b> | <a href="https://github.com/antfu/vitesse/blob/main/README.zh-CN.md">简体中文</a>
@@ -145,17 +131,11 @@ As this template is strongly opinionated, the following provides a curated list 
 
 > Vitesse requires Node >=14.18
 
-### GitHub Template
 
-[Create a repo from this template on GitHub](https://github.com/antfu/vitesse/generate).
 
 ### Clone to local
 
-If you prefer to do it manually with the cleaner git history
-
 ```bash
-npx degit antfu/vitesse my-vitesse-app
-cd my-vitesse-app
 pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
 ```
 
@@ -209,9 +189,3 @@ Run the image and specify port mapping with the `-p` flag.
 ```bash
 docker run --rm -it -p 8080:80 vitesse:latest
 ```
-
-## Why
-
-I have created several Vite apps recently. Setting the configs up is kinda the bottleneck for me to make the ideas simply come true within a very short time.
-
-So I made this starter template for myself to create apps more easily, along with some good practices that I have learned from making those apps. It's strongly opinionated, but feel free to tweak it or even maintain your own forks. [(see community maintained variation forks)](#variations)
